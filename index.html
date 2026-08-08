@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Video Page</title>
+  <title>Bal Parayan Smruti</title>
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -13,41 +13,85 @@
 
     body {
       min-height: 100vh;
-      background-color: #0a0a0a;
-      color: #f0f0f0;
+      background-color: #f5ede0;
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    /* ── Header ── */
-    .header {
+    /* ── Top card ── */
+    .card {
       width: 100%;
-      padding: 1.2rem 1rem 0.8rem;
+      max-width: 480px;
+      background: #fdf6ee;
+      border: 1.5px solid #e2c9a8;
+      border-radius: 18px;
+      margin: 1.2rem 0.8rem;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(180,130,80,0.13);
+    }
+
+    /* ── Header section ── */
+    .card-header {
+      background: #fdf0e2;
+      padding: 1.1rem 1rem 0.5rem;
       text-align: center;
-      background: linear-gradient(180deg, #111 0%, #0a0a0a 100%);
+      border-bottom: 1.5px solid #e2c9a8;
+      position: relative;
     }
 
-    h1 {
-      font-size: clamp(1.3rem, 5vw, 2rem);
+    .org-label {
+      font-size: 0.65rem;
       font-weight: 700;
-      letter-spacing: 0.01em;
-      color: #ffffff;
+      letter-spacing: 0.15em;
+      color: #b07840;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
     }
 
-    h1 span {
-      color: #4f9eff;
+    .title-en {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: #2c1a0e;
+      line-height: 1.1;
     }
 
-    /* ── Video — full width on mobile ── */
+    .title-en span {
+      color: #c8622a;
+    }
+
+    .title-gu {
+      font-size: 0.85rem;
+      color: #9a6a3a;
+      margin-top: 0.25rem;
+      font-weight: 500;
+    }
+
+    /* ── Decorative diya icon ── */
+    .diya {
+      font-size: 1.4rem;
+      margin: 0.5rem 0 0.3rem;
+      display: block;
+    }
+
+    /* ── Scallop border ── */
+    .scallop {
+      width: 100%;
+      line-height: 0;
+      overflow: hidden;
+    }
+
+    .scallop svg {
+      display: block;
+      width: 100%;
+    }
+
+    /* ── Video section ── */
     .video-wrapper {
       width: 100%;
-      max-width: 900px;
       background: #000;
-      /* No border-radius on mobile so it goes edge to edge */
-      overflow: hidden;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.7);
+      position: relative;
     }
 
     .video-wrapper iframe {
@@ -57,56 +101,69 @@
       border: none;
     }
 
-    /* ── Info bar below video ── */
-    .info {
-      width: 100%;
-      max-width: 900px;
-      padding: 0.9rem 1rem;
-      background: #111;
-      border-top: 1px solid #222;
-    }
-
-    .info p {
-      font-size: 0.82rem;
-      color: #888;
+    /* ── Caption ── */
+    .caption {
+      padding: 0.85rem 1rem;
+      background: #fdf6ee;
       text-align: center;
-      line-height: 1.5;
     }
 
-    /* ── Desktop: add rounded corners ── */
-    @media (min-width: 600px) {
-      body {
-        padding: 2rem 1rem;
-        justify-content: center;
-      }
+    .caption p {
+      font-size: 0.82rem;
+      color: #8a6040;
+      line-height: 1.5;
+      font-style: italic;
+    }
 
-      .video-wrapper {
-        border-radius: 12px;
-      }
-
-      .info {
-        border-radius: 0 0 12px 12px;
-        border-top: none;
-      }
+    /* ── Footer ── */
+    .footer {
+      width: 100%;
+      max-width: 480px;
+      text-align: center;
+      padding: 0 0.8rem 1.5rem;
+      font-size: 0.72rem;
+      color: #b09070;
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <h1>Watch My <span>Video</span></h1>
+  <div class="card">
+
+    <!-- Header -->
+    <div class="card-header">
+      <p class="org-label">BAPS Swaminarayan Sanstha</p>
+      <h1 class="title-en">Bal Parayan <span>Smruti</span></h1>
+      <p class="title-gu">બાળ પારાયણ સ્મૃતિ</p>
+      <span class="diya">🪔</span>
+    </div>
+
+    <!-- Scallop decorative border -->
+    <div class="scallop">
+      <svg viewBox="0 0 400 20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,0 Q10,20 20,0 Q30,20 40,0 Q50,20 60,0 Q70,20 80,0 Q90,20 100,0 Q110,20 120,0 Q130,20 140,0 Q150,20 160,0 Q170,20 180,0 Q190,20 200,0 Q210,20 220,0 Q230,20 240,0 Q250,20 260,0 Q270,20 280,0 Q290,20 300,0 Q310,20 320,0 Q330,20 340,0 Q350,20 360,0 Q370,20 380,0 Q390,20 400,0 L400,20 L0,20 Z"
+          fill="#fdf0e2" stroke="#e2c9a8" stroke-width="1"/>
+      </svg>
+    </div>
+
+    <!-- Video -->
+    <div class="video-wrapper">
+      <iframe
+        src="https://drive.google.com/file/d/1kpw-Vf2JztkORSnQ8dcZ_FjDTnwEv1B1/preview"
+        allow="autoplay"
+        allowfullscreen
+        aria-label="Bal Parayan Smruti Video"
+      ></iframe>
+    </div>
+
+    <!-- Caption -->
+    <div class="caption">
+      <p>A recording of the parayan, kept for the children who took part.</p>
+    </div>
+
   </div>
 
-  <div class="video-wrapper">
-    <iframe
-      src="https://drive.google.com/file/d/1kpw-Vf2JztkORSnQ8dcZ_FjDTnwEv1B1/preview"
-      allow="autoplay"
-      allowfullscreen
-      aria-label="Video player"
-    ></iframe>
-  </div>
-
-  <div class="info">
+  <div class="footer">
     <p>Scan the QR code to open this page on your phone.</p>
   </div>
 
