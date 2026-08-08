@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Video Page</title>
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #0f0f0f;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      padding: 1.5rem;
+    }
+
+    /* ── Heading ── */
+    h1 {
+      font-size: clamp(1.4rem, 5vw, 2.2rem);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.25rem;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    h1 span {
+      color: #4f9eff;
+    }
+
+    /* ── Video container ── */
+    .video-wrapper {
+      width: 100%;
+      max-width: 860px;
+      background: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+      /* Aspect ratio hint — browser uses this before the video loads */
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+
+    /* ── Caption below video ── */
+    .caption {
+      margin-top: 1rem;
+      font-size: 0.875rem;
+      color: #888;
+      text-align: center;
+    }
+
+    /* ── Mobile tweaks ── */
+    @media (max-width: 480px) {
+      body {
+        padding: 1rem;
+        justify-content: flex-start;
+        padding-top: 2rem;
+      }
+
+      h1 {
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Watch My <span>Video</span></h1>
+
+  <div class="video-wrapper">
+    <!--
+      Place your video file named "video.mp4" in the same folder as this
+      index.html, then push to GitHub. The video will load automatically.
+    -->
+    <video
+      controls
+      preload="metadata"
+      poster=""
+      aria-label="Video player"
+    >
+      <source src="video.mp4" type="video/mp4" />
+      Your browser does not support the HTML5 video tag.
+      Please update your browser to watch this video.
+    </video>
+  </div>
+
+  <p class="caption">Scan the QR code to open this page on your phone.</p>
+
+</body>
+</html>

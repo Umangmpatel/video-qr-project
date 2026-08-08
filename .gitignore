@@ -1,0 +1,29 @@
+# ── Video files (large — add your video locally, don't commit it) ──
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+# ── Generated QR code output ──
+qrcode_output.png
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+.venv/
+
+# ── Node.js (if you later use the Node QR script) ──
+node_modules/
+
+# ── OS junk ──
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editor folders ──
+.vscode/
+.idea/
