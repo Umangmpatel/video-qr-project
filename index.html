@@ -97,11 +97,11 @@
       overflow: hidden;
     }
 
-    .video-wrapper iframe {
+    .video-wrapper video {
       display: block;
       width: 100%;
       aspect-ratio: 16 / 9;
-      border: none;
+      background: #000;
     }
 
     /* ── Caption ── */
@@ -175,12 +175,14 @@
 
     <!-- Video -->
     <div class="video-wrapper">
-      <iframe
-        src="https://drive.google.com/file/d/1kpw-Vf2JztkORSnQ8dcZ_FjDTnwEv1B1/preview"
-        allow="autoplay"
-        allowfullscreen
+      <video
+        controls
+        preload="metadata"
         aria-label="Bal Parayan Smruti Video"
-      ></iframe>
+      >
+        <source src="https://archive.org/download/bal-parayan-zalak/Bal%20Parayan%20Zalak.mp4" type="video/mp4" />
+        Your browser does not support the HTML5 video tag.
+      </video>
     </div>
 
     <!-- Caption -->
