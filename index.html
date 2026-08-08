@@ -94,14 +94,16 @@
       background: #000;
       position: relative;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
     }
 
     .video-wrapper iframe {
       display: block;
       width: 100%;
-      aspect-ratio: 16 / 9;
+      max-width: 320px;
+      aspect-ratio: 9 / 16;
       border: none;
-      max-width: 100%;
     }
 
     /* ── Caption ── */
@@ -152,8 +154,8 @@
     <!-- Video -->
     <div class="video-wrapper">
       <iframe
-        src="https://drive.google.com/file/d/1kpw-Vf2JztkORSnQ8dcZ_FjDTnwEv1B1/preview"
-        allow="autoplay"
+        src="https://www.youtube.com/embed/xO8iFYbfhIE"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
         aria-label="Bal Parayan Smruti Video"
       ></iframe>
