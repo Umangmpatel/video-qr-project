@@ -11,47 +11,48 @@
       padding: 0;
     }
 
+    html, body {
+      height: 100%;
+    }
+
     body {
-      min-height: 100vh;
       background-color: #f0e6d3;
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       overflow-x: hidden;
+      padding: 0.8rem 0.7rem;
     }
 
-    /* ── Main card ── */
+    /* ── Card ── */
     .card {
-      width: calc(100% - 1.6rem);
+      width: 100%;
       max-width: 480px;
-      margin: 1.2rem 0.8rem 0.8rem;
+      border-radius: 16px;
       overflow: hidden;
-      border-radius: 18px;
-      box-shadow: 0 4px 24px rgba(160,110,60,0.18);
+      border: 1.5px solid #ddc49a;
+      box-shadow: 0 4px 20px rgba(160,110,60,0.15);
     }
 
     /* ── Header ── */
     .card-header {
       background: #faebd7;
-      padding: 1.2rem 1rem 0;
+      padding: 1rem 1rem 0;
       text-align: center;
-      border: 1.5px solid #ddc49a;
-      border-bottom: none;
-      border-radius: 18px 18px 0 0;
     }
 
     .org-label {
-      font-size: 0.6rem;
+      font-size: 0.58rem;
       font-weight: 700;
       letter-spacing: 0.18em;
       color: #b07840;
       text-transform: uppercase;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.3rem;
     }
 
     .title-en {
-      font-size: 1.75rem;
+      font-size: 1.6rem;
       font-weight: 800;
       color: #1e1008;
       line-height: 1.15;
@@ -62,74 +63,61 @@
     }
 
     .title-gu {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: #9a6a3a;
-      margin-top: 0.2rem;
+      margin-top: 0.15rem;
       font-weight: 500;
     }
 
     .diya {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       display: block;
-      margin: 0.6rem 0 0;
+      margin: 0.5rem 0 0;
     }
 
-    /* ── Decorative arch/wave border ── */
+    /* ── Arch border ── */
     .arch-border {
       width: 100%;
       line-height: 0;
       background: #faebd7;
-      border-left: 1.5px solid #ddc49a;
-      border-right: 1.5px solid #ddc49a;
     }
 
     .arch-border svg {
       display: block;
       width: 100%;
+      height: 20px;
     }
 
-    /* ── Video ── */
+    /* ── Video — takes maximum space ── */
     .video-wrapper {
       width: 100%;
-      background: #111;
-      border-left: 1.5px solid #ddc49a;
-      border-right: 1.5px solid #ddc49a;
-      overflow: hidden;
+      background: #000;
+      position: relative;
     }
 
     .video-wrapper video {
       display: block;
       width: 100%;
+      height: auto;
+      min-height: 220px;
+      max-height: 55vh;
+      object-fit: contain;
       background: #000;
-      object-fit: cover;
-      aspect-ratio: 9 / 16;
-      max-height: 75vh;
     }
 
     /* ── Caption ── */
     .caption {
       background: #faebd7;
-      border: 1.5px solid #ddc49a;
-      border-top: none;
-      border-radius: 0 0 18px 18px;
-      padding: 0.85rem 1rem 1rem;
+      border-top: 1px solid #e8d4b0;
+      padding: 0.7rem 1rem 0.8rem;
       text-align: center;
     }
 
     .caption p {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: #7a5030;
-      line-height: 1.6;
+      line-height: 1.5;
       font-style: italic;
-    }
-
-    /* ── Footer ── */
-    .footer {
-      margin-top: 0.5rem;
-      margin-bottom: 1rem;
-      font-size: 0.72rem;
-      color: #b09070;
-      text-align: center;
     }
   </style>
 </head>
@@ -145,33 +133,13 @@
       <span class="diya">🪔</span>
     </div>
 
-    <!-- Decorative arch border (like reference image) -->
+    <!-- Arch border -->
     <div class="arch-border">
-      <svg viewBox="0 0 400 28" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <!-- Arch bumps pointing UP from the header -->
-        <path d="M0,28
-          Q10,4 20,28
-          Q30,4 40,28
-          Q50,4 60,28
-          Q70,4 80,28
-          Q90,4 100,28
-          Q110,4 120,28
-          Q130,4 140,28
-          Q150,4 160,28
-          Q170,4 180,28
-          Q190,4 200,28
-          Q210,4 220,28
-          Q230,4 240,28
-          Q250,4 260,28
-          Q270,4 280,28
-          Q290,4 300,28
-          Q310,4 320,28
-          Q330,4 340,28
-          Q350,4 360,28
-          Q370,4 380,28
-          Q390,4 400,28
-          L400,28 L0,28 Z"
-          fill="#faebd7" stroke="#ddc49a" stroke-width="1.2"/>
+      <svg viewBox="0 0 400 20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,0 Q10,20 20,0 Q30,20 40,0 Q50,20 60,0 Q70,20 80,0 Q90,20 100,0 Q110,20 120,0 Q130,20 140,0 Q150,20 160,0 Q170,20 180,0 Q190,20 200,0 Q210,20 220,0 Q230,20 240,0 Q250,20 260,0 Q270,20 280,0 Q290,20 300,0 Q310,20 320,0 Q330,20 340,0 Q350,20 360,0 Q370,20 380,0 Q390,20 400,0 L400,20 L0,20 Z"
+          fill="#c8a06a" opacity="0.35"/>
+        <path d="M0,0 Q10,20 20,0 Q30,20 40,0 Q50,20 60,0 Q70,20 80,0 Q90,20 100,0 Q110,20 120,0 Q130,20 140,0 Q150,20 160,0 Q170,20 180,0 Q190,20 200,0 Q210,20 220,0 Q230,20 240,0 Q250,20 260,0 Q270,20 280,0 Q290,20 300,0 Q310,20 320,0 Q330,20 340,0 Q350,20 360,0 Q370,20 380,0 Q390,20 400,0"
+          fill="none" stroke="#c8a06a" stroke-width="1.5"/>
       </svg>
     </div>
 
@@ -192,10 +160,6 @@
       <p>A recording of the parayan, kept for the children who took part.</p>
     </div>
 
-  </div>
-
-  <div class="footer">
-    <p>Scan the QR code to open this page on your phone.</p>
   </div>
 
 </body>
