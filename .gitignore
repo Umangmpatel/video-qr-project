@@ -1,5 +1,5 @@
-# ── Video files (large — add your video locally, don't commit it) ──
-*.mp4
+# ── Video files (tracked via Git LFS instead) ──
+# *.mp4 — intentionally NOT ignored, handled by Git LFS
 *.mov
 *.avi
 *.mkv
