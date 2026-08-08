@@ -13,6 +13,8 @@
 
     html, body {
       height: 100%;
+      height: 100dvh;
+      overflow: hidden;
     }
 
     body {
@@ -21,41 +23,46 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      overflow-x: hidden;
-      padding: 0.6rem 0.7rem 0.6rem;
+      justify-content: center;
+      padding: 0.5rem 0.7rem;
     }
 
-    /* ── Card ── */
+    /* ── Card — full height, no scroll ── */
     .card {
       width: 100%;
       max-width: 480px;
+      height: 100%;
+      max-height: 100%;
       border-radius: 16px;
       overflow: hidden;
       border: 1.5px solid #ddc49a;
       box-shadow: 0 4px 20px rgba(160,110,60,0.15);
+      display: flex;
+      flex-direction: column;
     }
 
     /* ── Header ── */
     .card-header {
       background: #faebd7;
-      padding: 1rem 1rem 0;
+      padding: 0.6rem 1rem 0;
       text-align: center;
+      flex-shrink: 0;
     }
 
     .org-label {
-      font-size: 0.58rem;
+      font-size: 0.55rem;
       font-weight: 700;
       letter-spacing: 0.18em;
       color: #b07840;
       text-transform: uppercase;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.2rem;
     }
 
     .title-en {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 800;
       color: #1e1008;
-      line-height: 1.15;
+      line-height: 1.1;
     }
 
     .title-en span {
@@ -63,16 +70,16 @@
     }
 
     .title-gu {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: #9a6a3a;
-      margin-top: 0.15rem;
+      margin-top: 0.1rem;
       font-weight: 500;
     }
 
     .diya {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       display: block;
-      margin: 0.5rem 0 0;
+      margin: 0.3rem 0 0;
     }
 
     /* ── Arch border ── */
@@ -80,27 +87,31 @@
       width: 100%;
       line-height: 0;
       background: #faebd7;
+      flex-shrink: 0;
     }
 
     .arch-border svg {
       display: block;
       width: 100%;
-      height: 20px;
+      height: 16px;
     }
 
-    /* ── Video — takes maximum space ── */
+    /* ── Video — fills remaining space ── */
     .video-wrapper {
       width: 100%;
       background: #000;
-      position: relative;
+      flex: 1;               /* takes all remaining height */
+      min-height: 0;         /* important for flex children */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
     }
 
     .video-wrapper video {
       display: block;
       width: 100%;
-      height: auto;
-      min-height: 300px;
-      max-height: 65vh;
+      height: 100%;
       object-fit: contain;
       background: #000;
     }
@@ -109,14 +120,15 @@
     .caption {
       background: #faebd7;
       border-top: 1px solid #e8d4b0;
-      padding: 0.7rem 1rem 0.8rem;
+      padding: 0.5rem 1rem 0.6rem;
       text-align: center;
+      flex-shrink: 0;
     }
 
     .caption p {
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       color: #7a5030;
-      line-height: 1.5;
+      line-height: 1.4;
       font-style: italic;
     }
   </style>
